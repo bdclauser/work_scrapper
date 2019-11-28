@@ -20,3 +20,9 @@ for row in rows:
     cols = row.find_all('td')
     cols = [ele.text.strip() for ele in cols]
     data.append([ele for ele in cols if ele])
+
+## un-comment to test
+# print(data)
+
+df = pd.DataFrame(data)
+df.to_csv('webpage_save.csv', index=False)
